@@ -1,0 +1,18 @@
+package views
+
+import 	"goshareit/pathscan"
+
+templ Index(ps pathscan.PathScan){
+    <h1>GoShareIt</h1>
+
+    <ul>
+        for kdir,dir :=range ps.Directories{
+            <li>{dir.Name}</li>
+            <ul>
+            for _,file :=range ps.Directories[kdir].Files{
+                <li><a href={ templ.URL("/"+file.FullPath) }>{file.Name}</a></li>
+            }
+            </ul>
+        }
+    </ul>
+}
