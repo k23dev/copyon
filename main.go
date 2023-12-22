@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"goshareit/pathscan"
@@ -15,7 +14,7 @@ func main() {
 	var path string
 	var port string
 
-	if len(os.Args) < 1 {
+	if len(os.Args) < 2 {
 		path = "./"
 	} else {
 		path = os.Args[1]
@@ -47,7 +46,6 @@ func main() {
 func SetupStaticRoutes(path string, server *echo.Echo) {
 	ps := pathscan.New(path)
 	for _, dir := range ps.Directories {
-		fmt.Println("/" + dir.Name)
 		server.Static("/"+dir.Name, dir.Path)
 	}
 }
