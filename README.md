@@ -13,6 +13,14 @@ Now just open your browser and go to:
 
 http://localhost:[PORT]
 
-# Command to make windows exe
+# Build
+
+## Linux
+
+just run
+
+    make build
+
+## Windows
 
     GOOS=windows GOARCH=amd64 go build -o goshareit -ldflags "-w -s"
