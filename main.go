@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"goshareit/pathscan"
+	"goshareit/pkg/pathscan"
 	"goshareit/views"
 
 	"github.com/labstack/echo/v4"

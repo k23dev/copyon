@@ -1,7 +1,8 @@
-BINARY_NAME=goshareit
+BINARY_NAME=copyon
+VERSION=1.0
 BUILD_DIR=./build
 
-BINARY_NAME_WIN=goshareit.exe
+BINARY_NAME_WIN=copyon.exe
 BUILD_DIR_WIN=./build/windows
 
 all: build
